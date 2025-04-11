@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub User Finder</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+
+    <!-- Tailwind Dark Mode Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
+
+    
+  </head>
+  <body class="bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen transition-all duration-300">
+
+    <div class="max-w-xl mx-auto px-4 py-8">
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">GitHub User Finder</h1>
+        <button id="theme-toggle" class="px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700">
+          Toggle Theme
+        </button>
+      </div>
+
+      <!-- Search Form -->
+      <form id="search-form" class="flex gap-2 mb-6">
+        <input
+          type="text"
+          id="username-input"
+          placeholder="Enter GitHub username"
+          class="flex-grow px-4 py-2 rounded border border-gray-300 dark:bg-gray-800 dark:text-white"
+        />
+        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+          Search
+        </button>
+      </form>
+
+      <!-- User Info -->
+      <div id="user-info" class="space-y-4 hidden">
+        <div class="flex items-center gap-4">
+          <img id="avatar" src="" alt="Avatar" class="w-20 h-20 rounded-full" />
+          <div>
+            <h2 id="name" class="text-xl font-semibold"></h2>
+            <p id="login" class="text-sm text-gray-500"></p>
+          </div>
+        </div>
+        <p id="bio" class="text-gray-700 dark:text-gray-300"></p>
+        <div class="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
+          <span><strong id="repos">0</strong> Repos</span>
+          <span><strong id="followers">0</strong> Followers</span>
+          <span><strong id="following">0</strong> Following</span>
+        </div>
+        <a id="profile-link" href="#" target="_blank" class="text-blue-600 hover:underline">View Profile on GitHub</a>
+      </div>
+
+      <!-- Error Message -->
+      <div id="error-message" class="text-red-600 mt-4 hidden">User not found.</div>
+    </div>
+
+    <script src="githubuser.js"></script>
+  </body>
+</html>
