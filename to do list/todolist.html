@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-[#153677] to-[#4e085f] min-h-screen p-4">
+    <div class="max-w-xl mx-auto bg-white mt-24 p-10 rounded-lg shadow-lg">
+        <h2 class="text-[#002765] flex items-center text-2xl font-bold mb-5">
+            To-Do List
+            <img src="images/icon.png" alt="Icon" class="w-8 ml-2" />
+        </h2>
+        <div class="flex items-center justify-between bg-[#edeef0] rounded-full pl-5 mb-6">
+            <input type="text" id="input-box" placeholder="Add Your Text"
+                class="flex-1 bg-transparent outline-none py-2 px-2 text-base" />
+            <button onclick="AddTask()" class="bg-[#ff5945] text-white px-8 py-4 text-lg rounded-full hover:opacity-90">
+                ADD
+            </button>
+        </div>
+        <ul id="list-container" class="space-y-2">
+            <!-- Tasks will be added here -->
+        </ul>
+    </div>
+
+    <script src="todolist.js"></script>
+</body>
+
+</html>
