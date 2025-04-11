@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Search App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class' // ✅ This enables class-based toggling
+    };
+  </script>
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300 font-sans">
+  <div class="max-w-3xl mx-auto p-6">
+    <header class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold">🎬 Movie Search</h1>
+      <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full">
+        Toggle Theme
+      </button>
+    </header>
+
+    <form id="movie-form" class="flex gap-4 mb-6">
+      <input
+        type="text"
+        id="movie-input"
+        placeholder="Enter movie name..."
+        class="flex-grow px-4 py-2 border rounded dark:bg-gray-700 dark:border-white dark:text-white"
+      />
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Search</button>
+    </form>
+
+    <div id="movie-results" class="space-y-6"></div>
+  </div>
+
+  <script src="moviesearch.js"></script>
+</body>
+</html>
